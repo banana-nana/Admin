@@ -46,6 +46,7 @@
         <h3> Account </h3> 
         <p id="user_email"> Email :</p>
         <img src="https://via.placeholder.com/150" class="ui image centered" id="img">
+        <p id="config"></p>
         <button onclick="PC()">Close Account Settings</button> <br>
         <button onclick="logout()">Logout</button>
 
@@ -92,6 +93,27 @@ firebase.auth().onAuthStateChanged(user => {
         })
     }
 })
+
+
+
+
+
+function Getxt() {
+
+  var congtxt = document.getElementById("config");
+
+
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        firebase.storage().ref("users/" + user.uid + "/config.txt").getDownloadURL().then(txtUrl => {
+            congtxt.innerHTML = txtUrl;
+
+        })
+    }
+})
+}
+
+
 
 
       </script>
