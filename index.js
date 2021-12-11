@@ -64,3 +64,13 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
 console.log("Loading...");
+
+function MangeUser() {
+  document.getElementById("MU").style.display = "block";
+  document.getElementById("user_div").style.display = "none";
+}
+
+function CloseMU() {
+  document.getElementById("user_div").style.display = "block";
+  document.getElementById("MU").style.display = "none";
+}
