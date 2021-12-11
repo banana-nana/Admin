@@ -68,8 +68,9 @@ body {
     border-radius: 5px;
   }
 
-  .google {
-    color: rgb(225, 189, 121);
+  .MU {
+    background-color: #Fff;
+    border-radius: 5px;
   }
 
   .github {
@@ -121,3 +122,6 @@ body {
     border: 1px solid #5d8ffc;
     cursor: pointer;
   }
+
+
+  
