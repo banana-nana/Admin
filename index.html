@@ -44,6 +44,8 @@
 
       <div id="Profile" class="Profile">
         <h3> Account </h3> 
+        <p id="user_email"> Email :</p>
+
         <button onclick="PC()">Close Account Settings</button> <br>
         <button onclick="logout()">Logout</button>
 
@@ -71,6 +73,9 @@
         function PO() {
           document.getElementById("Profile").style.display = "block";
           document.getElementById("user_div").style.display = "none";
+
+
+            document.getElementById("user_email").innerHTML = "Email is : " + email_id;
 
         }
       </script>
