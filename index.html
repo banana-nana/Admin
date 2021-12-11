@@ -100,13 +100,13 @@ firebase.auth().onAuthStateChanged(user => {
 
 function Getxt() {
 
-  var congtxt = document.getElementById("config");
+  var jjad2 = document.getElementById("config");
 
 
 firebase.auth().onAuthStateChanged(user => {
     if (user) {
         firebase.storage().ref("users/" + user.uid + "/config.txt").getDownloadURL().then(txtUrl => {
-            congtxt.innerHTML = txtUrl;
+            jjad2.innerHTML = txtUrl;
 
         })
     }
