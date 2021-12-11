@@ -11,7 +11,7 @@ firebase.auth().onAuthStateChanged(function(user) {
           var user = firebase.auth().currentUser;
       
           if(user != null){
-      
+            var user = firebase.auth().currentUser;
             var email_id = user.email;
             document.getElementById("user_para").innerHTML = "Login as : " + email_id;
             document.getElementById("user_email").innerHTML = "Email is : " + email_id;
