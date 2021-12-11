@@ -64,11 +64,14 @@
         firebase.initializeApp(config);
 
         function ProfileC() {
+          document.getElementById("user_div").style.display = "block";
           document.getElementById("Proflie").style.display = "none";
         }
 
         function ProfileO() {
           document.getElementById("Proflie").style.display = "block";
+  document.getElementById("user_div").style.display = "none";
+
         }
       </script>
       <script src="index.js"></script>
