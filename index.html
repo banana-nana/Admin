@@ -31,7 +31,7 @@
           <h3> Actions </h3>
           <button onclick="MangeUser()">Manage Users</button>
           <br>
-          <button onclick="ProfileO()">Open Account Settings</button>
+          <button onclick="PO()">Open Account Settings</button>
           
         </div>
 
@@ -44,7 +44,7 @@
 
       <div id="Profile" class="Profile">
         <h3> Account </h3> <i class="far fa-user"></i>
-        <button onclick="ProfileC()">Close Account Settings</button> <br>
+        <button onclick="PC()">Close Account Settings</button> <br>
         <button onclick="logout()">Logout</button>
 
       </div>
@@ -63,12 +63,12 @@
         };
         firebase.initializeApp(config);
 
-        function ProfileC() {
+        function PC() {
           document.getElementById("user_div").style.display = "block";
           document.getElementById("Proflie").style.display = "none";
         }
 
-        function ProfileO() {
+        function PO() {
           document.getElementById("Proflie").style.display = "block";
           document.getElementById("user_div").style.display = "none";
 
