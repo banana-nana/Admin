@@ -98,6 +98,18 @@ firebase.auth().onAuthStateChanged(user => {
 
 
 
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        firebase.storage().ref("users/" + user.uid + "/profile.jpeg").getDownloadURL().then(imgUrl => {
+            img.src = imgUrl;
+
+        })
+    }
+})
+
+
+
+
 
 function Getxt() {
 
