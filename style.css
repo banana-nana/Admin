@@ -1,0 +1,191 @@
+body {
+    background: #ECEFF1;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+  }
+  
+  input, button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+  }
+  
+  .main-div, .loggedin-div {
+    width: 20%;
+    margin: 0px auto;
+    margin-top: 150px;
+    padding: 20px;
+    display: none;
+  }
+  
+  .main-div input {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    padding: 15px;
+    outline: none;
+    width: 90%;
+    margin-bottom: 20px;
+    transition: 1.5s;
+    -webkit-transition: 1.5s;
+    -moz-transition: 1.5s;
+  }
+  
+  .main-div input:focus {
+    border: 1px solid #777;
+  }
+  
+  .main-div button, .loggedin-div button {
+    background: #4c4c4e;
+    color: #fff;
+    border: 1px solid #4c4c4e;
+    border-radius: 5px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+  }
+  
+  .main-div button:hover, .loggedin-div button:hover {
+    background: #fff;
+    color: #4c4c4e;
+    border: 1px solid #4c4c4e;
+    cursor: pointer;
+  }
+
+  .mini {
+      color: #7d7d7d;
+      size: 1px;
+  }
+
+
+  .loggedin-div, .main-div {
+    background-color: #fff;
+    border-radius: 5px;
+  }
+
+  .MU {
+    background-color: #Fff;
+    border-radius: 5px;
+  }
+
+
+
+  .MU  {
+    width: 20%;
+    margin: 0px auto;
+    margin-top: 150px;
+    padding: 20px;
+    display: none;
+  }
+  
+  .MU input {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    padding: 15px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+  }
+  
+  .MU input:focus {
+    border: 1px solid #777;
+  }
+  
+  .MU button  {
+    background: #4c4c4e;
+    color: #fff;
+    border: 1px solid #4c4c4e;
+    border-radius: 5px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+  }
+  
+  .MU button:hover {
+    background: #fff;
+    color: #4c4c4e;
+    border: 1px solid #4c4c4e;
+    cursor: pointer;
+  }
+
+
+/* 
+      Profile Css Profile
+*/  
+
+  .Profile {
+    background-color: #Fff;
+    border-radius: 5px;
+  }
+
+
+
+  .Profile  {
+    width: 20%;
+    margin: 0px auto;
+    margin-top: 150px;
+    padding: 20px;
+    display: none;
+  }
+  
+  .Profile input {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    padding: 15px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+  }
+  
+  .Profile input:focus {
+    border: 1px solid #777;
+  }
+  
+  .Profile button  {
+    background: #4c4c4e;
+    color: #fff;
+    border: 1px solid #4c4c4e;
+    border-radius: 5px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+  }
+  
+  .Profile button:hover {
+    background: #fff;
+    color: #4c4c4e;
+    border: 1px solid #4c4c4e;
+    cursor: pointer;
+  }
+
+
+  
+
+
+
+
+  i {
+    text-align: center;
+    align-self: center;  
+  }

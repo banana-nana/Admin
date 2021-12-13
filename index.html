@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+      
+      <title>banana-nana Admin</title>
+      <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/7045fa8930.js" crossorigin="anonymous"></script>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+      <link rel="stylesheet" href="style.css" />
+      <script src="Profile.js"></script>
+    </head>
+    <body>
+    
+      <div id="login_div" class="main-div">
+        <h3>Banana-nana Admin Login Page</h3>
+        <input type="email" placeholder="Email..." id="email_field" />
+        <input type="password" placeholder="Password..." id="password_field" />
+    
+        <button onclick="login()">Login to Account</button>
+        <br>
+      <h3> Or </h3>
+        <p></p>
+        <button onclick="Home()">Normal Login Page</button>
+
+      </div>
+    
+      <div id="user_div" class="loggedin-div">
+          <h1> Banana-nana Admin Panel </h1> <p id="user_para">Welcome Back</p>
+          <h3> Actions </h3>
+          <button onclick="MangeUser()">Manage Users</button>
+          <br>
+          <button onclick="PO()">Open Account Settings</button>
+          
+        </div>
+
+      <div id="MU" class="MU">
+        <h3>Manage Users</h3>
+        
+        <button onclick="CloseMU()">Close</button>
+      </div>
+
+
+      <div id="Profile" class="Profile">
+        <h3> Account </h3> 
+        <p id="user_email"> Email :</p>
+        <img src="https://via.placeholder.com/150" class="ui image centered" id="img">
+        <img src="https://via.placeholder.com/1" class="ui image centered" id="Hired">
+        <p id="config"></p>
+        <button onclick="PC()">Close Account Settings</button> <br>
+        <button onclick="logout()">Logout</button>
+
+      </div>
+    
+    
+      <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyB1GpxGXPM9xelejNU-3ruldrz2JkCMW6c",
+          authDomain: "banana-nanaadmin.firebaseapp.com",
+          databaseURL: "https://banana-nanaadmin-default-rtdb.firebaseio.com",
+          projectId: "banana-nanaadmin",
+          storageBucket: "banana-nanaadmin.appspot.com",
+          messagingSenderId: "83485668873"
+        };
+        firebase.initializeApp(config);
+
+        function PC() {
+          document.getElementById("user_div").style.display = "block";
+          document.getElementById("Profile").style.display = "none";
+        }
+
+        function PO() {
+          document.getElementById("Profile").style.display = "block";
+          document.getElementById("user_div").style.display = "none";
+          var user = firebase.auth().currentUser;
+            var email_id = user.email;
+            document.getElementById("user_email").innerHTML = "Email is : " + email_id;
+
+
+        }
+
+
+
+ var img = document.getElementById("img");
+
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        firebase.storage().ref("users/" + user.uid + "/profile.jpg").getDownloadURL().then(imgUrl => {
+            img.src = imgUrl;
+
+        })
+    }
+})
+
+
+
+
+
+function Getxt() {
+
+  var jjad2 = document.getElementById("config");
+
+
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        firebase.storage().ref("users/" + user.uid + "/config.txt").getDownloadURL().then(txtUrl => {
+            jjad2.innerHTML = txtUrl;
+
+        })
+    }
+})
+}
+
+
+
+
+      </script>
+      <script src="index.js"></script>
+      <script src="twiiter.js"></script>   
+    
+      <script>
+
+        function Home() {
+          window.location.href = "https://banana-nana.github.io/Login"
+        }
+      </script>
+
+
+    </body>
+    </html>
