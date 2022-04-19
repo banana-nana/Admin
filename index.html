@@ -19,10 +19,13 @@
         <input type="password" placeholder="Password..." id="password_field" />
     
         <button onclick="login()">Login to Account</button>
+        <button onclick="create()">Login to Account</button>
         <br>
+          
       <h3> Or </h3>
         <p></p>
-        <button onclick="Home()">Normal Login Page</button>
+          <button onclick="signInWithPopup(GithubAuthProvider)">Login w/ Github</button>
+        
 
       </div>
     
@@ -76,7 +79,6 @@
           document.getElementById("Profile").style.display = "block";
           document.getElementById("user_div").style.display = "none";
           var user = firebase.auth().currentUser;
-            var email_id = user.email;
             document.getElementById("user_email").innerHTML = "Email is : " + email_id;
 
 
@@ -107,7 +109,23 @@ firebase.auth().onAuthStateChanged(user => {
     }
 })
 
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
+const auth = getAuth();
+            var email = user.email;
+            var pass = user.pass;
+          
+createUserWithEmailAndPassword(auth, email, pass)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
 
 
 
@@ -131,7 +149,7 @@ firebase.auth().onAuthStateChanged(user => {
 
       </script>
       <script src="index.js"></script>
-      <script src="twiiter.js"></script>   
+      <script src="github.js"></script>   
     
       <script>
 
